@@ -5,21 +5,36 @@ Plantilla base para proyectos de Godot 4 que usan
 reutilizable vive en `puppy_core/`; las reglas, escenas y recursos propios de cada
 juego viven en `game_content/`.
 
-## Crear un proyecto desde la plantilla
-
-Después de crear o clonar el repositorio del juego:
+## Inicializar y arrancar
 
 ```bash
+gh auth login
+gh repo create wdbals/mi-juego \
+  --template wdbals/template-godot \
+  --private \
+  --clone
+cd mi-juego
 git submodule update --init --recursive
 godot --editor --path .
 ```
 
-Cambia `application/config/name` en `project.godot`, sustituye
-`game_content/icon.png` y configura las acciones de entrada en **Project > Project
-Settings > Input Map**. La plantilla declara las acciones que esperan los
-componentes de movimiento de Puppy Core (`move_left`, `move_right`,
-`move_forward`, `move_backward` y `sprint`), pero las deja sin teclas para que cada
-juego defina sus controles.
+Usa `--public` en lugar de `--private` si el juego será público. Configura
+`config/name` en `project.godot`, el icono en `game_content/icon.png` y los
+controles en **Project > Project Settings > Input Map**.
+
+```bash
+git add .
+git commit -m "chore: initialize game from template"
+git push
+```
+
+Desde GitHub, usa **Use this template** y clona el juego así:
+
+```bash
+git clone --recurse-submodules git@github.com:wdbals/mi-juego.git
+cd mi-juego
+godot --editor --path .
+```
 
 ## Estructura
 
@@ -61,35 +76,12 @@ añadir el primer archivo real.
 
 ## Puppy Core
 
-La plantilla activa los servicios generales `AudioManager`, `InputManager`,
-`PauseManager`, `SaveManager`, `SceneManager` y `VideoManager`. Todos son
-opcionales: elimina de `[autoload]` en `project.godot` los que el proyecto no use.
-
-`UISoundManager` se deja desactivado porque necesita un perfil de sonidos propio
-del juego. Si se usa, hay que registrarlo después de `AudioManager`. El overlay de
-depuración también es optativo:
-
-```ini
-[autoload]
-
-AudioManager="*res://puppy_core/autoloads/audio_manager.gd"
-UISoundManager="*res://puppy_core/autoloads/ui_sound_manager.gd"
-DebugOverlay="*res://puppy_core/autoloads/debug_overlay.tscn"
-```
+No hay autoloads de Puppy Core activados por defecto. Añade a `[autoload]` en
+`project.godot` únicamente los servicios que use el juego.
 
 El layout de audio apunta directamente a
 `res://puppy_core/audio/default_bus_layout.tres` y aporta los buses `Master`,
 `SFX`, `UI`, `Music` y `Voice`.
-
-No añadas cambios propios del juego dentro de `puppy_core/`. Para actualizar la
-versión fijada por el proyecto:
-
-```bash
-git -C puppy_core fetch --tags
-git -C puppy_core checkout <tag-o-commit>
-git add puppy_core
-git commit -m "build: update puppy_core"
-```
 
 ## Capas de colisión
 

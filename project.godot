@@ -15,15 +15,6 @@ config/icon="res://game_content/icon.png"
 
 buses/default_bus_layout="res://puppy_core/audio/default_bus_layout.tres"
 
-[autoload]
-
-AudioManager="*res://puppy_core/autoloads/audio_manager.gd"
-InputManager="*res://puppy_core/autoloads/input_manager.gd"
-PauseManager="*res://puppy_core/autoloads/pause_manager.gd"
-SaveManager="*res://puppy_core/autoloads/save_manager.gd"
-SceneManager="*res://puppy_core/autoloads/scene_manager.gd"
-VideoManager="*res://puppy_core/autoloads/video_manager.gd"
-
 [display]
 
 window/size/viewport_width=640
