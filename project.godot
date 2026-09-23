@@ -1,0 +1,100 @@
+; Engine configuration file.
+; Prefer editing it from the Godot editor when possible.
+
+config_version=5
+
+[application]
+
+config/name="Puppies Game"
+run/main_scene="res://game_content/scenes/main.tscn"
+config/features=PackedStringArray("4.0", "GL Compatibility")
+boot_splash/image="res://game_content/icon.png"
+config/icon="res://game_content/icon.png"
+
+[audio]
+
+buses/default_bus_layout="res://puppy_core/audio/default_bus_layout.tres"
+
+[autoload]
+
+AudioManager="*res://puppy_core/autoloads/audio_manager.gd"
+InputManager="*res://puppy_core/autoloads/input_manager.gd"
+PauseManager="*res://puppy_core/autoloads/pause_manager.gd"
+SaveManager="*res://puppy_core/autoloads/save_manager.gd"
+SceneManager="*res://puppy_core/autoloads/scene_manager.gd"
+VideoManager="*res://puppy_core/autoloads/video_manager.gd"
+
+[display]
+
+window/size/viewport_width=640
+window/size/viewport_height=360
+window/size/window_width_override=1280
+window/size/window_height_override=720
+window/stretch/mode="canvas_items"
+window/vsync/vsync_mode=1
+
+[input]
+
+move_left={
+"deadzone": 0.2,
+"events": []
+}
+move_right={
+"deadzone": 0.2,
+"events": []
+}
+move_forward={
+"deadzone": 0.2,
+"events": []
+}
+move_backward={
+"deadzone": 0.2,
+"events": []
+}
+sprint={
+"deadzone": 0.2,
+"events": []
+}
+toggle_debug={
+"deadzone": 0.2,
+"events": []
+}
+
+[layer_names]
+
+2d_physics/layer_1="WORLD"
+2d_physics/layer_2="PLAYER_BODY"
+2d_physics/layer_3="ENEMY_BODY"
+2d_physics/layer_4="PLAYER_HURTBOX"
+2d_physics/layer_5="PLAYER_HITBOX"
+2d_physics/layer_6="ENEMY_HURTBOX"
+2d_physics/layer_7="ENEMY_HITBOX"
+2d_physics/layer_8="PLAYER_PROJECTILE"
+2d_physics/layer_9="ENEMY_PROJECTILE"
+2d_physics/layer_10="ITEMS"
+2d_physics/layer_11="PROPS"
+2d_physics/layer_12="INTERACTABLES"
+2d_physics/layer_13="TRIGGERS"
+3d_physics/layer_1="WORLD"
+3d_physics/layer_2="PLAYER_BODY"
+3d_physics/layer_3="ENEMY_BODY"
+3d_physics/layer_4="PLAYER_HURTBOX"
+3d_physics/layer_5="PLAYER_HITBOX"
+3d_physics/layer_6="ENEMY_HURTBOX"
+3d_physics/layer_7="ENEMY_HITBOX"
+3d_physics/layer_8="PLAYER_PROJECTILE"
+3d_physics/layer_9="ENEMY_PROJECTILE"
+3d_physics/layer_10="ITEMS"
+3d_physics/layer_11="PROPS"
+3d_physics/layer_12="INTERACTABLES"
+3d_physics/layer_13="TRIGGERS"
+
+[physics]
+
+2d/default_gravity=980.0
+3d/default_gravity=9.8
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"

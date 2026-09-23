@@ -1,0 +1,3 @@
+[submodule "puppy_core"]
+	path = puppy_core
+	url = git@github.com:wdbals/puppy_core.git

@@ -1,0 +1,39 @@
+# Godot 4: datos importados y caché del editor
+.godot/
+
+# Godot 3 (útil si el repositorio se abre con una versión antigua)
+.import/
+
+# Exportaciones y credenciales
+/exports/*
+!/exports/.gitkeep
+export.cfg
+export_credentials.cfg
+
+# Campo de pruebas local
+/tests/*
+!/tests/.gitkeep
+
+# Traducciones generadas al importar CSV
+*.translation
+
+# C# / Mono
+.mono/
+data_*/
+mono_crash.*.json
+
+# Ajustes locales de editores
+.idea/
+.vscode/
+*.code-workspace
+
+# Archivos del sistema y temporales
+.DS_Store
+Thumbs.db
+*~
+*.tmp
+
+# Variables y secretos locales
+.env
+.env.*
+!.env.example
