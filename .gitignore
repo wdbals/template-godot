@@ -25,6 +25,7 @@ mono_crash.*.json
 # Ajustes locales de editores
 .idea/
 .vscode/
+.zed/
 *.code-workspace
 
 # Archivos del sistema y temporales
