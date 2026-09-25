@@ -103,8 +103,8 @@ Las mismas capas están declaradas para física 2D y 3D:
 | 12 | `INTERACTABLES` | Objetos con interacción |
 | 13 | `TRIGGERS` | Áreas de eventos y detección |
 
-Los componentes `Hitbox` y `HurtBox` de Puppy Core no deciden equipos. Configura
-cada instancia para que el ataque observe únicamente la hurtbox contraria. Por
-ejemplo, `PLAYER_HITBOX` usa una máscara para `ENEMY_HURTBOX`, y
-`ENEMY_HITBOX` una máscara para `PLAYER_HURTBOX`. Las hurtboxes pueden dejar su
-máscara vacía porque son monitorizadas por las hitboxes.
+Los componentes `Hitbox`/`HurtBox` y `Hitbox3D`/`HurtBox3D` de Puppy Core no
+deciden equipos. Configura cada instancia para que el ataque observe únicamente
+la hurtbox contraria. Por ejemplo, `PLAYER_HITBOX` usa una máscara para
+`ENEMY_HURTBOX`, y `ENEMY_HITBOX` una máscara para `PLAYER_HURTBOX`. Las hurtboxes
+pueden dejar su máscara vacía porque son monitorizadas por las hitboxes.
