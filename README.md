@@ -1,6 +1,6 @@
 # Puppies Game Template
 
-Plantilla base para proyectos de Godot 4 que usan
+Plantilla base para proyectos de Godot 4.5 o posterior que usan
 [Puppy Core](https://github.com/wdbals/puppy_core) como submódulo. El código
 reutilizable vive en `puppy_core/`; las reglas, escenas y recursos propios de cada
 juego viven en `game_content/`.
