@@ -74,6 +74,10 @@ godot --editor --path .
 Los directorios vacíos versionados contienen un `.gitkeep`, que se puede borrar al
 añadir el primer archivo real.
 
+Como recomendación, guarda los recursos exclusivos de una escena junto a ella, en
+subcarpetas locales como `assets/`. Reserva `game_content/assets/` para recursos
+compartidos entre varias escenas o sistemas.
+
 ## Puppy Core
 
 No hay autoloads de Puppy Core activados por defecto. Añade a `[autoload]` en
