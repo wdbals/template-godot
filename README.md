@@ -112,3 +112,11 @@ deciden equipos. Configura cada instancia para que el ataque observe únicamente
 la hurtbox contraria. Por ejemplo, `PLAYER_HITBOX` usa una máscara para
 `ENEMY_HURTBOX`, y `ENEMY_HITBOX` una máscara para `PLAYER_HURTBOX`. Las hurtboxes
 pueden dejar su máscara vacía porque son monitorizadas por las hitboxes.
+
+## Capas visuales
+
+Las capas de render son independientes de las capas físicas. Los nombres de 2D
+ofrecen `DEFAULT`, `BACKGROUND`, `WORLD`, `CHARACTERS`, `FOREGROUND`, `EFFECTS`
+y `UI`; los de 3D ofrecen `DEFAULT`, `WORLD`, `PLAYER`, `ENEMIES`, `EFFECTS` y
+`UI`. Son etiquetas para organizar `CanvasItem`/`VisualInstance3D` y las máscaras
+de `Camera2D`/`Camera3D`; cámbialas o amplíalas según el juego.

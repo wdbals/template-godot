@@ -53,6 +53,20 @@ toggle_debug={
 
 [layer_names]
 
+2d_render/layer_1="DEFAULT"
+2d_render/layer_2="BACKGROUND"
+2d_render/layer_3="WORLD"
+2d_render/layer_4="CHARACTERS"
+2d_render/layer_5="FOREGROUND"
+2d_render/layer_6="EFFECTS"
+2d_render/layer_7="UI"
+3d_render/layer_1="DEFAULT"
+3d_render/layer_2="WORLD"
+3d_render/layer_3="PLAYER"
+3d_render/layer_4="ENEMIES"
+3d_render/layer_5="EFFECTS"
+3d_render/layer_6="UI"
+
 2d_physics/layer_1="WORLD"
 2d_physics/layer_2="PLAYER_BODY"
 2d_physics/layer_3="ENEMY_BODY"
