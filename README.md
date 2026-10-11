@@ -19,8 +19,13 @@ godot --editor --path .
 ```
 
 Usa `--public` en lugar de `--private` si el juego será público. Configura
-`config/name` en `project.godot`, el icono en `game_content/icon.png` y los
-controles en **Project > Project Settings > Input Map**.
+`config/name` en `project.godot` y el icono en `game_content/icon.png`. El mapa
+de entrada ya incluye WASD y flechas para moverse, Shift para correr, Space para
+saltar, E para interactuar, clic izquierdo para atacar y Escape para pausar.
+También incluye stick izquierdo y cruceta para moverse, stick presionado para
+correr, A para saltar, X para interactuar, gatillo derecho para atacar y Start
+para pausar. Puedes cambiar las asignaciones en **Project > Project Settings >
+Input Map**.
 
 ```bash
 git add .
